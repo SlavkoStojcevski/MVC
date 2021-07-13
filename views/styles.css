@@ -1,0 +1,55 @@
+.nightsky {
+    background: url(unsplash.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+* {
+    text-align: center !important;
+}
+
+#reportsuccess,
+#reportdanger,
+#message {
+    display: none;
+}
+
+a:hover,
+.btn:hover,
+.alert:hover,
+p:hover,
+input:hover,
+span:hover,
+button:hover,
+label:hover {
+    font-size: 110%;
+}
+
+#browse {
+    max-width: 145px;
+}
+
+textarea,
+input,
+.form-check {
+    text-align: left !important;
+}
+
+.shade {
+    background: rgba(0, 0, 0, 0.6)!important;
+}
+
+.animate {
+    transition: 1s ease-in-out;
+}
+
+.blur {
+    backdrop-filter: blur(8px)!important;
+}
+
+.animate:hover {
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.5);
+}
