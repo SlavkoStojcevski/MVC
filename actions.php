@@ -104,3 +104,18 @@ if ($_GET["action"] == "newtweet") {
         }
     }
     echo $confirm;}
+if ($_GET["action"] == "deleteuser") {
+    $confirm = "";
+    $deleteid=$_SESSION['id'];
+    $query = "DELETE FROM `users` WHERE `users`.`id` = $deleteid";
+    if (mysqli_query($link, $query)) {
+        $query1 = "DELETE FROM `tweets` WHERE `tweets`.`userid` = $deleteid";
+        if (mysqli_query($link, $query1)) {
+            $confirm = "1";
+        } else {
+            $confirm = "Please try again later.";
+        }
+    } else {
+        $confirm = "Please try again later.";
+    }
+    echo $confirm;}

@@ -12,7 +12,8 @@
 
 #reportsuccess,
 #reportdanger,
-#message {
+#message,
+#delete {
     display: none;
 }
 

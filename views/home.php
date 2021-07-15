@@ -14,7 +14,7 @@
           <div class="alert mt-5 alert-success text-break" id="reportsuccess"></div>
           <div class="alert mt-5 alert-danger text-break" id="reportdanger"></div>
         </strong>
-        <?php newtweet();?>
+        <?php newtweet();if($x)deleteuser();?>
       </div>
     </div>
   </div>

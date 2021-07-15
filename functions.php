@@ -106,6 +106,12 @@ function profiles(){
     while($row=mysqli_fetch_array($result)){
         echo "<p class='rounded py-2 animate'><a class='text-decoration-none'href='?page=profile&email=".$row[0]."'><b>".$row[0]."</b></a></p>";
     }}
+function deleteuser(){
+    echo "<button id='deleteuser' class='my-5 btn btn-danger'>delete user</button>
+    <div class='animate rounded-3 py-4' id='delete'>
+        <p class='text-danger fw-bold fs-3'>Are you sure?</p>
+        <button id='no' class='mx-3 btn btn-success'>No</button>
+        <button id='yes' class='mx-3 btn btn-danger'>Yes</button></div>";}
 if (array_key_exists("login", $_GET)) {
     if ($_GET["login"] == "0") {
         session_destroy();

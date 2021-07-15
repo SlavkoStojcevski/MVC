@@ -7,6 +7,8 @@
               data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
+            <div class="alert alert-warning"><strong>Please do not use any real email or password.</strong><br>
+              This website is for portfolio purposes only.<br>(SSL Certificate lacking.)</div>
             <div class="mx-2 my-2 py-3 px-4">
               <label for="email" class="form-label text-primary">Email address</label>
               <input name="email" type="email" placeholder="Email address" class="form-control 
@@ -84,6 +86,24 @@
                 $("#reportdanger").html(result);
               }
               $("#tweet").val("");;
+            }
+          })
+        });
+      $("#deleteuser").click(function(){$("#delete").show();});
+      $("#no").click(function(){$("#delete").hide();});
+      $("#yes").click(
+        function() {
+          $.ajax({
+            type: "POST",
+            url: "actions.php?action=deleteuser",
+            data: "",
+            success: function(result) {
+              if(result=="1"){
+                window.location.assign("http://localhost/twitter.com/MVC/index.php?login=0");
+              } else{
+                $("#reportdanger").show();
+                $("#reportdanger").html(result);
+              }
             }
           })
         });
